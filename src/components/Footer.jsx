@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React from "react"
+import Logo from "./Logo"
+import { Link } from "react-router-dom"
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div>
-                <a href='/blog'>Blog</a>
-            </div>
-        )
-    }
+const Footer = () => {
+	return (
+		<footer className="h-16 w-full px-8 py-4 flex flex-row items-center justify-between bg-slate-300">
+			<Link to="/" className="">
+				<Logo />
+			</Link>
+
+			<div className="">Pavlov Dmitry</div>
+		</footer>
+	)
 }
+
+export default Footer

@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React from "react"
+import { Link } from "react-router-dom"
+import Logo from "./Logo"
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div>
-                <a href='/'>Home</a>
-                <p></p>
-                <a href='/about'>About</a>
-            </div>
-        )
-    }
+const Header = () => {
+	return (
+		<header className="w-full h-16 px-8 py-4 bg-slate-300 items-center flex flex-row gap-6 justify-between">
+			<Link to="/">
+				<Logo />
+			</Link>
+
+			<div className="flex flex-row gap-3 items-center">
+				<Link to="/">Главная</Link>
+				<Link to="/about">О нас</Link>
+				<Link to="/blog">Блог</Link>
+			</div>
+		</header>
+	)
 }
+
+export default Header
