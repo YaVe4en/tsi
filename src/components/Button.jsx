@@ -6,7 +6,8 @@ export const Button = ({
 	...rest
 }) => {
 	// класс по умолчанию
-	const defaultClass = "flex items-center cursor-pointer w-auto py-2"
+	const defaultClass =
+		"flex items-center justify-center cursor-pointer w-auto py-2"
 
 	const classes = {
 		colors: {
